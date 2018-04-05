@@ -11,6 +11,7 @@ public abstract class AbstractPlace extends AbstractModel implements Place {
 
     private String name;
     private String description;
+    private String address;
     private List<Rating> ratings;
     private List<Comment> comments;
 
@@ -39,11 +40,27 @@ public abstract class AbstractPlace extends AbstractModel implements Place {
         this.ratings = ratings;
     }
 
+    @Override
     public List<Comment> getComments() {
         return comments;
     }
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    @Override
+    public Rating getAverageRating(){
+
+        return null;
+    }
+
+    @Override
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
