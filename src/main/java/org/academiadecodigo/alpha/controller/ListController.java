@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
-public class ListController {
+public class ListController implements Controller{
 
     @FXML
     private ImageView placeImage7;
