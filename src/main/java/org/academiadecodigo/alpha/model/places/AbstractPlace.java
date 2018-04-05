@@ -4,6 +4,8 @@ import org.academiadecodigo.alpha.model.AbstractModel;
 import org.academiadecodigo.alpha.model.Comment;
 import org.academiadecodigo.alpha.model.Rating;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 
@@ -14,6 +16,14 @@ public abstract class AbstractPlace extends AbstractModel implements Place {
     private String address;
     private List<Rating> ratings;
     private List<Comment> comments;
+    private Integer openingTime;
+    private Integer closingTime;
+
+    public boolean isOpened() {
+
+        return ( (openingTime < LocalDateTime.now().getHour()) && (LocalDateTime.now().getHour() < closingTime));
+
+    }
 
 
     public String getName() {
@@ -62,5 +72,21 @@ public abstract class AbstractPlace extends AbstractModel implements Place {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Integer getOpeningTime() {
+        return openingTime;
+    }
+
+    public void setOpeningTime(Integer openingTime) {
+        this.openingTime = openingTime;
+    }
+
+    public Integer getClosingTime() {
+        return closingTime;
+    }
+
+    public void setClosingTime(Integer closingTime) {
+        this.closingTime = closingTime;
     }
 }
