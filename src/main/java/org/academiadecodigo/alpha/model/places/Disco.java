@@ -1,4 +1,5 @@
 package org.academiadecodigo.alpha.model.places;
 
-public class Disco {
+public class Disco extends AbstractPlace{
+
 }
