@@ -3,38 +3,12 @@ package org.academiadecodigo.alpha.persistence.jpa;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
-public class SessionManager {
+public interface SessionManager {
 
+    void startSession();
 
-        private EntityManagerFactory emf;
-        private EntityManager em;
+    EntityManager getCurrentSession();
 
-        public SessionManager(EntityManagerFactory emf){
-            this.emf = emf;
-            em = emf.createEntityManager();
-        }
-
-
-        public void startSession() {
-
-            if (em == null) {
-                em = emf.createEntityManager();
-
-            }
-        }
-
-        public EntityManager getCurrentSession() {
-            startSession();
-            return em;
-
-        }
-
-        public void stopSession() {
-
-            if (em != null) {
-                em.close();
-            }
-            em = null;
-        }
+    void stopSession();
 
 }
