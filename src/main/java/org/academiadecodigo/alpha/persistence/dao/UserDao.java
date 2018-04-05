@@ -1,4 +1,7 @@
 package org.academiadecodigo.alpha.persistence.dao;
 
-public interface UserDao {
+import org.academiadecodigo.alpha.model.User;
+
+public interface UserDao  extends Dao<User>{
+
 }
