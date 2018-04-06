@@ -4,6 +4,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import javax.swing.text.html.ImageView;
 import java.util.Date;
 
 @MappedSuperclass
@@ -46,6 +47,7 @@ public abstract class AbstractModel implements Model {
 
 
     public Date getCreationTime() {
+
         return creationTime;
     }
 
