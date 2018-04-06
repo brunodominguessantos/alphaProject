@@ -1,14 +1,42 @@
 package org.academiadecodigo.alpha.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 
 public class ListController implements Controller{
 
 
     private static final String NAME = "ListView";
+    @FXML
+    private ImageView appTitle;
+
+    @FXML
+    private Label displayedTime;
+
+    @FXML
+    private HBox buttonsContainer;
+
+    @FXML
+    private GridPane buttonsGridContainer;
+
+    @FXML
+    private Label city;
+
+    @FXML
+    private Button homeButton;
+
+    @FXML
+    private Button optionalButton1;
+
+    @FXML
+    private Button optionalButton2;
+
     @FXML
     private ImageView placeImage7;
 
@@ -52,28 +80,43 @@ public class ListController implements Controller{
     private ImageView GoodBtn7;
 
     @FXML
-    private TextArea textArea1;
+    private Label label1;
 
     @FXML
-    private TextArea textArea2;
+    private Label label2;
 
     @FXML
-    private TextArea textArea3;
+    private Label label3;
 
     @FXML
-    private TextArea textArea4;
+    private Label label4;
 
     @FXML
-    private TextArea textArea5;
+    private Label label5;
 
     @FXML
-    private TextArea textArea6;
+    private Label label6;
 
     @FXML
-    private TextArea textArea7;
+    private Label label7;
+
+    @FXML
+    void homeAction(MouseEvent event) {
+
+    }
 
     @FXML
     void increasePoints(MouseEvent event) {
+
+    }
+
+    @FXML
+    void option1Action(MouseEvent event) {
+
+    }
+
+    @FXML
+    void option2Action(MouseEvent event) {
 
     }
 
@@ -111,6 +154,7 @@ public class ListController implements Controller{
     void placeViewTwo(MouseEvent event) {
 
     }
+
 
 
     public static String getNAME() {

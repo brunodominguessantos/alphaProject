@@ -1,5 +1,11 @@
 package org.academiadecodigo.alpha.model.places;
 
-public class Disco extends AbstractPlace{
+
+import javax.persistence.Entity;
+
+@Entity
+public class Disco extends AbstractPlace implements Place{
+
+    public Disco(){}
 
 }
