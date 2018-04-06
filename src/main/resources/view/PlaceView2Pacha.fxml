@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -43,11 +42,7 @@
                <children>
                   <Label fx:id="placeName" text="Label" GridPane.halignment="CENTER" />
                   <Label fx:id="address" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <ImageView fitHeight="38.0" fitWidth="66.0" pickOnBounds="true" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-                     <image>
-                        <Image url="@../../../../../googleMaps.png" />
-                     </image>
-                  </ImageView>
+                  <ImageView fx:id="googleMaps" fitHeight="42.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
             <GridPane>
@@ -76,14 +71,11 @@
                               <Insets />
                            </GridPane.margin>
                         </Label>
+                        <ImageView fx:id="imagemLike" fitHeight="50.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </GridPane>
                   <Button fx:id="bemBombutton" mnemonicParsing="false" onMouseClicked="#bemBombuttonAcoustic" text="Button" GridPane.columnIndex="1" />
-                  <ImageView fitHeight="116.0" fitWidth="96.0" pickOnBounds="true" GridPane.halignment="CENTER">
-                     <image>
-                        <Image url="@../../../../../2Pacha.jpg" />
-                     </image>
-                  </ImageView>
+                  <ImageView fx:id="imagemZe" fitHeight="135.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" />
                </children>
             </GridPane>
          </children>

@@ -55,7 +55,7 @@ public class ListController implements Controller{
     private ImageView placeImage5;
 
     @FXML
-    private ImageView placeImage4;
+    private ImageView imagemAlaude;
 
     @FXML
     private ImageView placeImage3;
@@ -91,16 +91,19 @@ public class ListController implements Controller{
     private Label label7;
 
     @FXML
-    private Label rating1;
+    private ImageView like1;
 
     @FXML
-    private Label rating2;
+    private ImageView like2;
 
     @FXML
-    private Label rating3;
+    private ImageView like3;
 
     @FXML
-    private Label rating4;
+    private ImageView like4;
+
+    @FXML
+    private ImageView like;
 
     @FXML
     private Label rating5;
@@ -110,6 +113,15 @@ public class ListController implements Controller{
 
     @FXML
     private Label rating7;
+
+    @FXML
+    private ImageView imagemZe;
+
+    @FXML
+    private ImageView imagemPacha;
+
+    @FXML
+    private ImageView imagemLux;
 
     @FXML
     void homeAction(MouseEvent event) {
@@ -142,6 +154,7 @@ public class ListController implements Controller{
 
     }
 
+
     @FXML
     void placeViewSeven(MouseEvent event) {
 
@@ -168,6 +181,11 @@ public class ListController implements Controller{
 
     }
 
+    @FXML
+    void placeViewZe(MouseEvent event) {
+        Navigation.getInstance().loadScreen((PlaceController.getNAME()));
+    }
+
 
     private String home = "Refresh";
     private String food = "Get Food";
@@ -188,7 +206,19 @@ public class ListController implements Controller{
         transportButton.setText(transport);
         luckyButton.setText(lucky);
         displayedTime.setText(nowTime.toString() + ":00    heyyyyy!!");
-
+        imagemZe.setImage(new Image("1Ze.jpg"));
+        imagemPacha.setImage(new Image("2Pacha.jpg"));
+        imagemLux.setImage(new Image("3Lux.jpg"));
+        imagemAlaude.setImage(new Image("4Alaude.jpg"));
+        like1.setImage(new Image("bem_bom.png"));
+        like2.setImage(new Image("bem_bom.png"));
+        like3.setImage(new Image("bem_bom.png"));
+        like4.setImage(new Image("bem_bom.png"));
+        appTitle.setImage(new Image("logoQT.png"));
+        label1.setText("O Senhor Zé");
+        label2.setText("PACHA Fundão");
+        label3.setText("LUX Fundão");
+        label4.setText("Alaúde");
     }
 
     public static String getNAME() {

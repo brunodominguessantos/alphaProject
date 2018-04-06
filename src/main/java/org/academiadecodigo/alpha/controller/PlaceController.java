@@ -4,11 +4,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.AudioClip;
 import org.academiadecodigo.alpha.services.PlaceService;
 import org.academiadecodigo.alpha.services.ServiceRegistry;
 import javafx.scene.input.MouseEvent;
+
 
 public class PlaceController {
 
@@ -24,16 +26,19 @@ public class PlaceController {
     private Label address;
 
     @FXML
-    private Label googleMaps;
+    private ImageView googleMaps;
 
     @FXML
     private Label ratingLabel;
 
     @FXML
-    private ImageView voteButton;
+    private ImageView imagemLike;
 
     @FXML
     private Button bemBombutton;
+
+    @FXML
+    private ImageView imagemZe;
 
     @FXML
     private TextField usercomment;
@@ -77,11 +82,12 @@ public class PlaceController {
     public void initialize(){
         placeService = (PlaceService) ServiceRegistry.getServiceRegistry().getService(PlaceService.class.getSimpleName());
         System.out.println(placeService);
+        imagemLike.setImage(new Image("bem_bom.png"));
+        imagemZe.setImage(new Image("1Ze.jpg"));
+        googleMaps.setImage(new Image("googleMaps.png"));
         //googleMaps.setText(google);
 
     }
-
-
 
     public static String getNAME() {
         return NAME;
