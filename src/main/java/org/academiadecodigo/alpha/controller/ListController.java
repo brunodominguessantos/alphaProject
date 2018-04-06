@@ -135,10 +135,10 @@ public class ListController implements Controller{
     @FXML
     void placeViewOne(MouseEvent event) {
 
-        //Navigation.getInstance().loadScreen(PlaceController.getNAME());
+        Navigation.getInstance().loadScreen(PlaceController.getNAME());
 
-        AudioClip clip = new AudioClip(getClass().getResource("/1982_Doce.mp3").toExternalForm());
-        clip.play();
+        //AudioClip clip = new AudioClip(getClass().getResource("/1982_Doce.mp3").toExternalForm());
+        //clip.play();
 
     }
 

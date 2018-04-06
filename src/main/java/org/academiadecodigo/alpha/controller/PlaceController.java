@@ -69,8 +69,9 @@ public class PlaceController {
     private Label comment5;
 
     public void initialize(){
-        placeService =(PlaceService) ServiceRegistry.getServiceRegistry().getService(PlaceService.class.getSimpleName());
-        googleMaps.setText(google);
+        placeService = (PlaceService) ServiceRegistry.getServiceRegistry().getService(PlaceService.class.getSimpleName());
+        System.out.println(placeService);
+        //googleMaps.setText(google);
     }
 
     @FXML
