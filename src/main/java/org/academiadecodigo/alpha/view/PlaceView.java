@@ -1,5 +1,5 @@
 package org.academiadecodigo.alpha.view;
 
-public class LoginView {
+public class PlaceView {
 
 }
