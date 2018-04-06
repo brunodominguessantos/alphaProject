@@ -1,4 +1,6 @@
 package org.academiadecodigo.alpha.services;
 
-public interface CommentService extends Service {
+import org.academiadecodigo.alpha.model.Comment;
+
+public interface CommentService extends Service<Comment> {
 }

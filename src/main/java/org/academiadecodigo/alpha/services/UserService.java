@@ -1,4 +1,9 @@
 package org.academiadecodigo.alpha.services;
 
-public interface UserService extends Service {
+import org.academiadecodigo.alpha.model.Rating;
+import org.academiadecodigo.alpha.model.User;
+
+public interface UserService extends Service<User> {
+
+
 }

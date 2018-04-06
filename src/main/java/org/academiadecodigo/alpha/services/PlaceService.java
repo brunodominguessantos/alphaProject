@@ -1,4 +1,8 @@
 package org.academiadecodigo.alpha.services;
 
-public interface PlaceService extends Service {
+import org.academiadecodigo.alpha.model.places.Place;
+
+public interface PlaceService extends Service<Place> {
+
+    public void rate(Integer placeId, Integer userId);
 }

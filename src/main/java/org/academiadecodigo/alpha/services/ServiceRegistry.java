@@ -36,5 +36,7 @@ public class ServiceRegistry {
         registryMap.remove(sname);
     }
 
-
+    public void setRegistryMap(Map<String, Service> registryMap) {
+        this.registryMap = registryMap;
+    }
 }

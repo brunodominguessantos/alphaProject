@@ -1,4 +1,6 @@
 package org.academiadecodigo.alpha.services;
 
-public interface RatingService extends Service {
+import org.academiadecodigo.alpha.model.Rating;
+
+public interface RatingService extends Service<Rating> {
 }

@@ -4,8 +4,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import org.academiadecodigo.alpha.services.PlaceService;
+import org.academiadecodigo.alpha.services.ServiceRegistry;
 
 public class PlaceController {
+
+    private PlaceService placeService;
+
+
 
     @FXML
     private Label placeName;
@@ -54,5 +60,10 @@ public class PlaceController {
 
     @FXML
     private Label comment5;
+
+    public void initialize(){
+        placeService =(PlaceService) ServiceRegistry.getServiceRegistry().getService(PlaceService.class.getSimpleName());
+    }
+
 
 }
