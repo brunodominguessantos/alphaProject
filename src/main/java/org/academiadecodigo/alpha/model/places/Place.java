@@ -7,6 +7,7 @@ import org.academiadecodigo.alpha.model.Rating;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+import java.util.LinkedList;
 import java.util.List;
 
 @Entity
@@ -29,7 +30,7 @@ public abstract class Place extends AbstractModel {
 
             fetch = FetchType.LAZY
     )
-    private List<Rating> ratings;
+    private List<Rating> ratings = new LinkedList<>();
 
     @OneToMany( // TODO : verify this
 
@@ -41,7 +42,7 @@ public abstract class Place extends AbstractModel {
 
             fetch = FetchType.EAGER
     )
-    private List<Comment> comments;
+    private List<Comment> comments = new LinkedList<>();
     private Integer openingTime;
     private Integer closingTime;
     private String picturePath;
@@ -52,6 +53,18 @@ public abstract class Place extends AbstractModel {
 
     }
 
+    public void addComment(Comment comment){
+        comments.add(comment);
+        comment.setPlace(this);
+    }
+
+    public void addRating(Rating rating){
+        ratings.add(rating);
+        rating.setPlace(this);
+    }
+
+
+    //GETTERS AND SETTERS
 
     public String getName() {
         return name;

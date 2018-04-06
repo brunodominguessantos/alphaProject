@@ -5,8 +5,8 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "")
-public class Place extends AbstractModel {
+@Table(name = "user")
+public class User extends AbstractModel {
 
     private String name;
 

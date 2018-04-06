@@ -1,13 +1,13 @@
 package org.academiadecodigo.alpha.persistence.dao;
 
-import org.academiadecodigo.alpha.model.Place;
+import org.academiadecodigo.alpha.model.User;
 import org.academiadecodigo.alpha.persistence.jpa.SessionManager;
 
 
-public class UserDaoImpl extends AbstractDao<Place> implements UserDao {
+public class UserDaoImpl extends AbstractDao<User> implements UserDao {
 
     public UserDaoImpl(SessionManager sm) {
-        super(sm, Place.class);
+        super(sm, User.class);
     }
 
 

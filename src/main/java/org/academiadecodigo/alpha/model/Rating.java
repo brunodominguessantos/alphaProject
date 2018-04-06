@@ -1,5 +1,7 @@
 package org.academiadecodigo.alpha.model;
 
+import org.academiadecodigo.alpha.model.places.Place;
+
 import javax.persistence.*;
 
 @Entity
