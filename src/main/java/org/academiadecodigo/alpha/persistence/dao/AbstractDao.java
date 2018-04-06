@@ -10,7 +10,7 @@ import java.util.List;
 public abstract class AbstractDao<T extends Model> implements Dao <T> {
 
     protected JpaSessionManager sm;
-    private Class<T> modelType;
+    protected Class<T> modelType;
 
     public AbstractDao(JpaSessionManager sm, Class<T> modelType) {
         this.sm = sm;

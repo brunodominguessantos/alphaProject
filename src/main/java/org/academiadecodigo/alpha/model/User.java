@@ -1,7 +1,18 @@
 package org.academiadecodigo.alpha.model;
 
-public class User extends AbstractModel{
+import javax.persistence.Entity;
 
 
+@Entity
+public class User extends AbstractModel {
 
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
