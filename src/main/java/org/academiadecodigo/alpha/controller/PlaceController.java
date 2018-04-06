@@ -19,6 +19,7 @@ public class PlaceController {
     private static final String NAME = "PlaceView2Pacha";
     private String google = "Google it on google maps";
 
+
     @FXML
     private Label placeName;
 
@@ -35,13 +36,13 @@ public class PlaceController {
     private ImageView imagemLike;
 
     @FXML
-    private Button bemBombutton;
-
-    @FXML
     private ImageView imagemZe;
 
     @FXML
     private TextField usercomment;
+
+    @FXML
+    private Label descricao;
 
     @FXML
     private Label userName1;
@@ -56,9 +57,6 @@ public class PlaceController {
     private Label userName4;
 
     @FXML
-    private Label userName5;
-
-    @FXML
     private Label comment1;
 
     @FXML
@@ -71,13 +69,17 @@ public class PlaceController {
     private Label comment4;
 
     @FXML
-    private Label comment5;
+    void likeAction(MouseEvent event) {
 
-    public void bemBombuttonAcoustic(MouseEvent mouseEvent) {
         System.out.println("WAS CLIKCED");
         AudioClip clip = new AudioClip(getClass().getResource("/1982_Doce.mp3").toExternalForm());
         clip.play();
+
+
+
+
     }
+
 
     public void initialize(){
         placeService = (PlaceService) ServiceRegistry.getServiceRegistry().getService(PlaceService.class.getSimpleName());
@@ -85,6 +87,19 @@ public class PlaceController {
         imagemLike.setImage(new Image("bem_bom.png"));
         imagemZe.setImage(new Image("1Ze.jpg"));
         googleMaps.setImage(new Image("googleMaps.png"));
+
+        ratingLabel.setText("75");
+        descricao.setText("O melhor after de Portugal e quiçá no fundão. Neste emblemático café, localizado no Central Business Center do Fundão, reunem-se diariamente personalidades marcantes da vida social fundanense. A não perder!\n");
+        userName1.setText("Hácaro");
+        userName2.setText("Gervásio");
+        userName3.setText("Gustavo");
+        comment1.setText("One of the best clubs to go out in Fundão! Nice environment, many interesting people (compering to other clubs), good music ( not much of commercial Music) and it haves 3 floors.\n");
+        comment2.setText("Melhor disco da cidade, adoro o espaço e a proximidade da serra. Música à medida e estacionamento à porta. O meu sítio de eleição para ouvir boa música e sacudir o corpo :)\n");
+
+        comment3.setText("O meu espaço de eleição para sair à noite! Mantém os valores de há muitos anos, tem pistas com estilos diferentes para abranger mais gostos musicais ou para se ir variando, o espaço é cuidado é muito bonito. \n");
+
+        address.setText("Praça do Município 27/8, 6230-338 Fundão");
+        placeName.setText("O Senhor Zé");
         //googleMaps.setText(google);
 
     }

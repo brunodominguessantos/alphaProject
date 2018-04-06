@@ -1,5 +1,6 @@
 package org.academiadecodigo.alpha;
 
+import com.guigarage.flatterfx.FlatterFX;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -82,6 +83,7 @@ public final class Navigation {
     private void setScene(Scene scene) {
 
         stage.setScene(scene);
+        FlatterFX.style();
         stage.show();
     }
 
