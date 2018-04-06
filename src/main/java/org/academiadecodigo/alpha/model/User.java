@@ -13,6 +13,6 @@ public class User extends AbstractModel {
     }
 
     public void setName(String name) {
-        this.name = name;
+
     }
 }
