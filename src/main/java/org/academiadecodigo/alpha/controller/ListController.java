@@ -2,12 +2,13 @@ package org.academiadecodigo.alpha.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 public class ListController implements Controller{
 
+
+    private static final String NAME = "ListView";
     @FXML
     private ImageView placeImage7;
 
@@ -72,9 +73,6 @@ public class ListController implements Controller{
     private TextArea textArea7;
 
     @FXML
-    private TextField City;
-
-    @FXML
     void increasePoints(MouseEvent event) {
 
     }
@@ -114,4 +112,8 @@ public class ListController implements Controller{
 
     }
 
+
+    public static String getNAME() {
+        return NAME;
+    }
 }

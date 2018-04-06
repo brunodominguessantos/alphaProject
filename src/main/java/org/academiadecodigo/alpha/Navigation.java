@@ -13,18 +13,14 @@ import java.util.Map;
 
 public final class Navigation {
 
-    public final static int WIDTH = 1024;
-    public final static int HEIGHT = 768;
 
-    public final static String VIEW_PATH = "/org/academiadecodigo/alpha/view";
+    public final static String VIEW_PATH = "/view";
     private static Navigation instance;
-    private LinkedList<Scene> scenes;
-    private Map<String, Controller> controllers;
+    private LinkedList<Scene> scenes = new LinkedList<>();
+    private Map<String, Controller> controllers = new HashMap<>();
     private Stage stage;
 
     private Navigation() {
-        this.scenes = new LinkedList<>();
-        this.controllers = new HashMap<>();
     }
 
     public static Navigation getInstance(){
@@ -48,7 +44,7 @@ public final class Navigation {
 
         Parent root = loadView(view);
 
-        Scene scene = new Scene(root, WIDTH, HEIGHT);
+        Scene scene = new Scene(root);
         scenes.push(scene);
 
         setScene(scene);
@@ -63,8 +59,12 @@ public final class Navigation {
 
             // Instantiate the the controller
             FXMLLoader fxmlLoader;
-            fxmlLoader = new FXMLLoader(getClass().getResource(VIEW_PATH + "/" + view + ".fxml"));
+            fxmlLoader = new FXMLLoader(getClass().getResource(VIEW_PATH + "/"+ view + ".fxml"));
+            System.out.println(VIEW_PATH + "/"+ view + ".fxml");
             root = fxmlLoader.load();
+            System.out.println("ROOT HAS BEEN LOADED");
+
+            System.out.println(root);
 
             // Store the view and the controller
             controllers.put(view, fxmlLoader.<Controller>getController());
