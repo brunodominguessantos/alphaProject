@@ -16,6 +16,10 @@ public class HotNightApp extends Application{
     @Override
     public void start(Stage primaryStage) {
 
+        Bootstrap bootstrap = new Bootstrap();
+        bootstrap.testUserDao();
+        bootstrap.testPlaceDao();
+
         Navigation navigation = Navigation.getInstance();
         navigation.setStage(primaryStage);
 
