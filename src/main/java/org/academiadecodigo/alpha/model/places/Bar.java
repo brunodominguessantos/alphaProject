@@ -1,4 +1,9 @@
 package org.academiadecodigo.alpha.model.places;
 
-public class Bar extends AbstractPlace{
+import javax.persistence.Entity;
+
+@Entity
+public class Bar extends AbstractPlace implements Place{
+
+    public Bar(){ }
 }

@@ -4,20 +4,47 @@ import org.academiadecodigo.alpha.model.AbstractModel;
 import org.academiadecodigo.alpha.model.Comment;
 import org.academiadecodigo.alpha.model.Rating;
 
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToMany;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
+
 import java.util.List;
 
-
+@MappedSuperclass
 public abstract class AbstractPlace extends AbstractModel implements Place {
 
     private String name;
     private String description;
     private String address;
+
+    @OneToMany( // TODO : verify this
+
+            cascade = {CascadeType.ALL},
+
+            orphanRemoval = true,
+
+            mappedBy = "place",
+
+            fetch = FetchType.EAGER
+    )
     private List<Rating> ratings;
+
+    @OneToMany( // TODO : verify this
+
+            cascade = {CascadeType.ALL},
+
+            orphanRemoval = true,
+
+            mappedBy = "place",
+
+            fetch = FetchType.EAGER
+    )
     private List<Comment> comments;
     private Integer openingTime;
     private Integer closingTime;
+    private String picturePath;
 
     public boolean isOpened() {
 
