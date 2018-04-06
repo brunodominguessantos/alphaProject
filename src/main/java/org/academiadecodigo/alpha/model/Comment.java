@@ -13,6 +13,7 @@ import java.util.Date;
 public class Comment extends AbstractModel{
 
     private String comment;
+    private Integer userId;
 
     public String getComment() {
         return comment;
@@ -20,5 +21,13 @@ public class Comment extends AbstractModel{
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }
