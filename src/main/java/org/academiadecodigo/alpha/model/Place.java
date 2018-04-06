@@ -1,10 +1,12 @@
 package org.academiadecodigo.alpha.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 
 @Entity
-public class User extends AbstractModel {
+@Table(name = "")
+public class Place extends AbstractModel {
 
     private String name;
 
@@ -13,6 +15,6 @@ public class User extends AbstractModel {
     }
 
     public void setName(String name) {
-
+        this.name = name;
     }
 }

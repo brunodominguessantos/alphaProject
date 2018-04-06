@@ -1,7 +1,7 @@
 package org.academiadecodigo.alpha.persistence.dao;
 
-import org.academiadecodigo.alpha.model.places.AbstractPlace;
+import org.academiadecodigo.alpha.model.places.Place;
 
 
-public interface PlaceDao extends Dao<AbstractPlace> {
+public interface PlaceDao extends Dao<Place> {
 }

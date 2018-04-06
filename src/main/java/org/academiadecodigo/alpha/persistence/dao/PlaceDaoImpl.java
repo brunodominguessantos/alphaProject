@@ -1,15 +1,15 @@
 package org.academiadecodigo.alpha.persistence.dao;
 
-import org.academiadecodigo.alpha.model.places.AbstractPlace;
+import org.academiadecodigo.alpha.model.places.Place;
 import org.academiadecodigo.alpha.persistence.jpa.JpaSessionManager;
+import org.academiadecodigo.alpha.persistence.jpa.SessionManager;
 
 
+public class PlaceDaoImpl extends AbstractDao<Place>implements PlaceDao{
 
-public class PlaceDaoImpl extends AbstractDao<AbstractPlace>implements PlaceDao{
 
-
-    public PlaceDaoImpl(JpaSessionManager sm){
-        super(sm, AbstractPlace.class);
+    public PlaceDaoImpl(SessionManager sm){
+        super(sm, Place.class);
     }
 
 

@@ -2,6 +2,7 @@ package org.academiadecodigo.alpha.persistence.dao;
 
 import org.academiadecodigo.alpha.model.Model;
 import org.academiadecodigo.alpha.persistence.jpa.JpaSessionManager;
+import org.academiadecodigo.alpha.persistence.jpa.SessionManager;
 
 
 import javax.persistence.criteria.CriteriaQuery;
@@ -9,10 +10,10 @@ import java.util.List;
 
 public abstract class AbstractDao<T extends Model> implements Dao <T> {
 
-    protected JpaSessionManager sm;
+    protected SessionManager sm;
     protected Class<T> modelType;
 
-    public AbstractDao(JpaSessionManager sm, Class<T> modelType) {
+    public AbstractDao(SessionManager sm, Class<T> modelType) {
         this.sm = sm;
         this.modelType = modelType;
     }

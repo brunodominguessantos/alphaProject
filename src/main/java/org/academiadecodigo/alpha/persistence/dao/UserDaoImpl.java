@@ -1,17 +1,13 @@
 package org.academiadecodigo.alpha.persistence.dao;
 
-import org.academiadecodigo.alpha.model.User;
-import org.academiadecodigo.alpha.persistence.jpa.JpaSessionManager;
-
-import javax.persistence.RollbackException;
-import javax.persistence.criteria.CriteriaQuery;
-import java.util.List;
+import org.academiadecodigo.alpha.model.Place;
+import org.academiadecodigo.alpha.persistence.jpa.SessionManager;
 
 
-public class UserDaoImpl extends AbstractDao<User> implements UserDao {
+public class UserDaoImpl extends AbstractDao<Place> implements UserDao {
 
-    public UserDaoImpl(JpaSessionManager sm, Class<User> modelType) {
-        super(sm, modelType);
+    public UserDaoImpl(SessionManager sm) {
+        super(sm, Place.class);
     }
 
 
