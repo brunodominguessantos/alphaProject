@@ -55,4 +55,6 @@ public class PlaceController {
     @FXML
     private Label comment5;
 
+
+
 }

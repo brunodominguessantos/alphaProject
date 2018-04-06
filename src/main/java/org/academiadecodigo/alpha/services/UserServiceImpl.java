@@ -15,16 +15,18 @@ import java.util.List;
 public class UserServiceImpl extends AbstractSevice implements UserService  {
 
 
-    private UserDao userDao;
+
     private PlaceDao placeDao;
     private TransactionManager transactionManager;
     private Integer placeId;
     private Integer userId;
+    private PlaceService placeService;
 
-    public UserServiceImpl(UserDao userDao, PlaceDao placeDao, TransactionManager transactionManager, Integer userId){
-        this.userDao = userDao;
+    public UserServiceImpl(UserDao userDao, PlaceDao placeDao, TransactionManager transactionManager, PlaceService placeService, Integer userId){
         this.placeDao = placeDao;
         this.transactionManager = transactionManager;
+        this.userId = userId;
+        this.placeService = placeService;
     }
 
     public void rate(){
@@ -33,9 +35,10 @@ public class UserServiceImpl extends AbstractSevice implements UserService  {
         return;
     }
 
-    transactionManager.beginWrite();
+    transactionManager.beginRead();
     Place place = placeDao.findById(userId);
 
+    placeService.createRate(userId, place);
 
 
     }

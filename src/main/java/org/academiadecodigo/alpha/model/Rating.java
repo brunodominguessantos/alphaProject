@@ -8,19 +8,23 @@ import javax.persistence.*;
 @Table(name = "rating")
 public class Rating extends AbstractModel{
 
-    private Integer rating;
+    //private final Integer RATING = 1;
     private Integer userId;
 
     @ManyToOne
     private Place place;
 
-    public Integer getRating() {
+    public Rating(Integer userId, Place place) {
+        this.userId = userId;
+        this.place = place;
+    }
+   /* public Integer getRating() {
         return rating;
     }
 
     public void setRating(Integer rating) {
         this.rating = rating;
-    }
+    }*/
 
     public Place getPlace() {
         return place;
