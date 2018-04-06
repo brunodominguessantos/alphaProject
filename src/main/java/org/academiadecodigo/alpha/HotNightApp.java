@@ -5,6 +5,11 @@ import com.guigarage.flatterfx.FlatterFX;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import org.academiadecodigo.alpha.controller.ListController;
+import org.academiadecodigo.alpha.services.RatingService;
+import org.academiadecodigo.alpha.services.Service;
+import org.academiadecodigo.alpha.services.ServiceRegistry;
+
+import java.util.Map;
 
 public class HotNightApp extends Application{
 
@@ -21,6 +26,8 @@ public class HotNightApp extends Application{
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.testUserDao();
         bootstrap.testPlaceDao();
+
+        bootstrap.wireDependencies();
 
         Navigation navigation = Navigation.getInstance();
         navigation.setStage(primaryStage);

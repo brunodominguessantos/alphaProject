@@ -11,9 +11,12 @@ import org.academiadecodigo.alpha.persistence.jpa.JpaSessionManager;
 import org.academiadecodigo.alpha.persistence.jpa.SessionManager;
 import org.academiadecodigo.alpha.persistence.jpa.TransactionManager;
 import org.academiadecodigo.alpha.persistence.jpa.TransactionManagerImpl;
+import org.academiadecodigo.alpha.services.*;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Bootstrap {
 
@@ -22,9 +25,21 @@ public class Bootstrap {
     TransactionManager tx = new TransactionManagerImpl(sessionManager);
 
     public void wireDependencies(){
+        UserDaoImpl userDao = new UserDaoImpl(sessionManager);
+        PlaceDaoImpl placeDao = new PlaceDaoImpl(sessionManager);
+        CommentDaoImpl commentDao = new CommentDaoImpl(sessionManager);
+        RatingDaoImpl ratingDao = new RatingDaoImpl(sessionManager);
 
+        UserServiceImpl userService = new UserServiceImpl(tx, userDao);
+        PlaceServiceImpl placeService = new PlaceServiceImpl(tx, placeDao);
+        CommentServiceImpl commentService = new CommentServiceImpl(tx, commentDao);
+        RatingServiceImpl ratingService = new RatingServiceImpl(tx, ratingDao);
+
+        ServiceRegistry.getServiceRegistry().registerService(RatingService.class.getSimpleName(), ratingService);
+        ServiceRegistry.getServiceRegistry().registerService(PlaceService.class.getSimpleName(), placeService);
+        ServiceRegistry.getServiceRegistry().registerService(CommentService.class.getSimpleName(), commentService);
+        ServiceRegistry.getServiceRegistry().registerService(UserService.class.getSimpleName(), userService);
     }
-
 
     //Dao Tests
     public void testUserDao(){
@@ -32,7 +47,7 @@ public class Bootstrap {
 
         UserDao userDao = new UserDaoImpl(sessionManager);
         User ruben = new User();
-        ruben.setName("Ruben");
+        ruben.setName("Ácaro");
         System.out.println(ruben.getName());
 
         tx.beginWrite();
@@ -42,9 +57,12 @@ public class Bootstrap {
     }
 
     public void testPlaceDao(){
+        UserDao userDao = new UserDaoImpl(sessionManager);
         PlaceDao placeDao = new PlaceDaoImpl(sessionManager);
         RatingDao ratingDao = new RatingDaoImpl(sessionManager);
         CommentDao commentDao = new CommentDaoImpl(sessionManager);
+
+        User acaro = userDao.findById(1);
 
         Place lux = new Disco();
         lux.setName("Lux");
@@ -69,10 +87,6 @@ public class Bootstrap {
         commentDao.saveOrUpdate(comment);
         ratingDao.saveOrUpdate(rating);
         tx.commit();
-
-
-
-
 
     }
 
