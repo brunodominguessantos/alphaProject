@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import org.academiadecodigo.alpha.Navigation;
 
 public class ListController implements Controller{
 
@@ -123,11 +124,13 @@ public class ListController implements Controller{
     @FXML
     void placeViewFour(MouseEvent event) {
 
+
     }
 
     @FXML
     void placeViewOne(MouseEvent event) {
 
+        Navigation.getInstance().loadScreen(PlaceController.getName());
     }
 
     @FXML

@@ -7,6 +7,12 @@ import javafx.scene.image.ImageView;
 
 public class PlaceController {
 
+    private static final String NAME = "PlaceView";
+
+    public static String getName(){
+        return NAME;
+    }
+
     @FXML
     private Label placeName;
 
@@ -54,5 +60,7 @@ public class PlaceController {
 
     @FXML
     private Label comment5;
+
+
 
 }

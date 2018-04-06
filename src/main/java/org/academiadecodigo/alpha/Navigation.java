@@ -60,6 +60,7 @@ public final class Navigation {
             // Instantiate the the controller
             FXMLLoader fxmlLoader;
             fxmlLoader = new FXMLLoader(getClass().getResource(VIEW_PATH + "/"+ view + ".fxml"));
+            System.out.println(fxmlLoader.getLocation());
             System.out.println(VIEW_PATH + "/"+ view + ".fxml");
             root = fxmlLoader.load();
             System.out.println("ROOT HAS BEEN LOADED");
