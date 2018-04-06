@@ -36,8 +36,8 @@ public final class Navigation {
         this.stage = stage;
     }
 
-    public  void getController(String view){
-        controllers.get(view);
+    public  Controller getController(String view){
+        return controllers.get(view);
     }
 
     public void loadScreen(String view) {
