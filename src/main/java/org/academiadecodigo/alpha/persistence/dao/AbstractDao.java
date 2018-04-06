@@ -27,6 +27,7 @@ public abstract class AbstractDao<T extends Model> implements Dao <T> {
 
     @Override
     public T findById(Integer id) {
+
         return sm.getCurrentSession().find(modelType, id);
     }
 

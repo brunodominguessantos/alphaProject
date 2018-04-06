@@ -1,6 +1,7 @@
 package org.academiadecodigo.alpha.model.places;
 
 import org.academiadecodigo.alpha.model.AbstractModel;
+import org.academiadecodigo.alpha.controller.ListController;
 import org.academiadecodigo.alpha.model.Comment;
 import org.academiadecodigo.alpha.model.Rating;
 
@@ -127,4 +128,5 @@ public abstract class Place extends AbstractModel {
     public void setClosingTime(Integer closingTime) {
         this.closingTime = closingTime;
     }
+
 }
