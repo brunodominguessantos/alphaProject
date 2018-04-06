@@ -1,5 +1,7 @@
 package org.academiadecodigo.alpha;
 
+import com.aquafx_project.AquaFx;
+import com.guigarage.flatterfx.FlatterFX;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import org.academiadecodigo.alpha.controller.ListController;
@@ -28,6 +30,7 @@ public class HotNightApp extends Application{
         navigation.loadScreen(ListController.getNAME());
 
         primaryStage.setTitle("Quality Time");
+        FlatterFX.style();
         primaryStage.show();
     }
 }
