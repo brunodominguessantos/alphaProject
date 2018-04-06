@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.AudioClip;
+import javafx.scene.text.Font;
 import org.academiadecodigo.alpha.services.PlaceService;
 import org.academiadecodigo.alpha.services.ServiceRegistry;
 import javafx.scene.input.MouseEvent;
@@ -90,15 +91,25 @@ public class PlaceController {
 
         ratingLabel.setText("75");
         descricao.setText("O melhor after de Portugal e quiçá no fundão. Neste emblemático café, localizado no Central Business Center do Fundão, reunem-se diariamente personalidades marcantes da vida social fundanense. A não perder!\n");
-        userName1.setText("Hácaro");
-        userName2.setText("Gervásio");
-        userName3.setText("Gustavo");
-        comment1.setText("One of the best clubs to go out in Fundão! Nice environment, many interesting people (compering to other clubs), good music ( not much of commercial Music) and it haves 3 floors.\n");
-        comment2.setText("Melhor disco da cidade, adoro o espaço e a proximidade da serra. Música à medida e estacionamento à porta. O meu sítio de eleição para ouvir boa música e sacudir o corpo :)\n");
+        descricao.setFont(Font.font("Tahoma", 12));
 
+        userName1.setText("Hácaro");
+        userName1.setFont(Font.font("Tahoma", 12));
+        userName2.setText("Gervásio");
+        userName2.setFont(Font.font("Tahoma", 12));
+        userName3.setText("Gustavo");
+        userName3.setFont(Font.font("Tahoma", 12));
+
+        comment1.setText("One of the best clubs to go out in Fundão! Nice environment, many interesting people (compering to other clubs), good music ( not much of commercial Music) and it haves 3 floors.\n");
+        comment1.setFont(Font.font("Tahoma", 12));
+        comment2.setText("Melhor disco da cidade, adoro o espaço e a proximidade da serra. Música à medida e estacionamento à porta. O meu sítio de eleição para ouvir boa música e sacudir o corpo :)\n");
+        comment2.setFont(Font.font("Tahoma", 12));
         comment3.setText("O meu espaço de eleição para sair à noite! Mantém os valores de há muitos anos, tem pistas com estilos diferentes para abranger mais gostos musicais ou para se ir variando, o espaço é cuidado é muito bonito. \n");
+        comment3.setFont(Font.font("Tahoma", 12));
 
         address.setText("Praça do Município 27/8, 6230-338 Fundão");
+        address.setFont(Font.font("Tahoma", 12));
+
         placeName.setText("O Senhor Zé");
         //googleMaps.setText(google);
 
