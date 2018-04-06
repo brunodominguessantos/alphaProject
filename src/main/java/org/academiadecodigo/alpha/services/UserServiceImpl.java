@@ -1,18 +1,16 @@
 package org.academiadecodigo.alpha.services;
 
 import org.academiadecodigo.alpha.model.Rating;
-import org.academiadecodigo.alpha.model.User;
 import org.academiadecodigo.alpha.model.places.Place;
 import org.academiadecodigo.alpha.persistence.dao.PlaceDao;
 import org.academiadecodigo.alpha.persistence.dao.UserDao;
 import org.academiadecodigo.alpha.persistence.jpa.TransactionManager;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
 
-public class UserServiceImpl extends AbstractSevice implements UserService  {
+public class UserServiceImpl extends AbstractService implements UserService  {
 
 
     private UserDao userDao;
