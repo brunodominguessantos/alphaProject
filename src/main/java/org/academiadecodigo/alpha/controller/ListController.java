@@ -3,15 +3,19 @@ package org.academiadecodigo.alpha.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import org.academiadecodigo.alpha.Navigation;
+
+import java.time.LocalDateTime;
 
 public class ListController implements Controller{
 
-
     private static final String NAME = "ListView";
+
     @FXML
     private ImageView appTitle;
 
@@ -123,33 +127,62 @@ public class ListController implements Controller{
     @FXML
     void placeViewFour(MouseEvent event) {
 
+
     }
 
     @FXML
     void placeViewOne(MouseEvent event) {
+
+        Navigation.getInstance().loadScreen(PlaceController.getNAME());
 
     }
 
     @FXML
     void placeViewSeven(MouseEvent event) {
 
+        Navigation.getInstance().loadScreen(PlaceController.getNAME());
     }
 
     @FXML
     void placeViewSix(MouseEvent event) {
 
+        Navigation.getInstance().loadScreen(PlaceController.getNAME());
     }
 
     @FXML
     void placeViewThree(MouseEvent event) {
+
+        Navigation.getInstance().loadScreen((PlaceController.getNAME()));
 
     }
 
     @FXML
     void placeViewTwo(MouseEvent event) {
 
+        Navigation.getInstance().loadScreen((PlaceController.getNAME()));
+
     }
 
+
+    private String home = "Refresh";
+    private String food = "Get Food";
+    private String transport = "Get Ride";
+    private String lucky = "Get Lucky";
+    // to improve
+    private String nowTime = LocalDateTime.now().toString();
+
+
+    public void initialize() {
+
+        Image image = new Image("logo.png");
+        appTitle.setImage(image);
+        homeButton.setText(home);
+        foodButton.setText(food);
+        transportButton.setText(transport);
+        luckyButton.setText(lucky);
+        displayedTime.setText(nowTime);
+
+    }
 
     public static String getNAME() {
         return NAME;

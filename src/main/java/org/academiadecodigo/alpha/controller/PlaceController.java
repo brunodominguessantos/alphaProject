@@ -1,32 +1,40 @@
 package org.academiadecodigo.alpha.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import org.academiadecodigo.alpha.services.PlaceService;
 import org.academiadecodigo.alpha.services.ServiceRegistry;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.Media;
+import java.awt.event.MouseEvent;
 
 public class PlaceController {
 
     private PlaceService placeService;
 
-
+    private static final String NAME = "PlaceView";
+    private String google = "Google it on google maps";
 
     @FXML
     private Label placeName;
 
     @FXML
-    private Label Address;
+    private Label address;
 
     @FXML
-    private Label GoogleMaps;
+    private Label googleMaps;
 
     @FXML
     private Label ratingLabel;
 
     @FXML
-    private ImageView picture;
+    private ImageView voteButton;
+
+    @FXML
+    private Button bemBombutton;
 
     @FXML
     private TextField usercomment;
@@ -63,7 +71,18 @@ public class PlaceController {
 
     public void initialize(){
         placeService =(PlaceService) ServiceRegistry.getServiceRegistry().getService(PlaceService.class.getSimpleName());
+        googleMaps.setText(google);
     }
 
+    @FXML
+    void bemBombuttonAcoustic(MouseEvent event){
 
+        Media sound = new Media("1982_Doce.mp3");
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+    }
+
+    public static String getNAME() {
+        return NAME;
+    }
 }

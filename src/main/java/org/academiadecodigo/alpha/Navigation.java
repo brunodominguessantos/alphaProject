@@ -36,8 +36,8 @@ public final class Navigation {
         this.stage = stage;
     }
 
-    public  void getController(String view){
-        controllers.get(view);
+    public  Controller getController(String view){
+        return controllers.get(view);
     }
 
     public void loadScreen(String view) {
@@ -60,6 +60,7 @@ public final class Navigation {
             // Instantiate the the controller
             FXMLLoader fxmlLoader;
             fxmlLoader = new FXMLLoader(getClass().getResource(VIEW_PATH + "/"+ view + ".fxml"));
+            System.out.println(fxmlLoader.getLocation());
             System.out.println(VIEW_PATH + "/"+ view + ".fxml");
             root = fxmlLoader.load();
             System.out.println("ROOT HAS BEEN LOADED");
