@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.AudioClip;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.Media;
 import java.awt.event.MouseEvent;
@@ -69,11 +70,8 @@ public class PlaceController {
 
     @FXML
     void bemBombuttonAcoustic(MouseEvent event){
-
-        Media sound = new Media("1982_Doce.mp3");
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
-
+        AudioClip clip = new AudioClip("1982_Doce.mp3");
+        clip.play();
     }
 
 

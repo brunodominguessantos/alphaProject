@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.media.AudioClip;
 import org.academiadecodigo.alpha.Navigation;
 
 import java.time.LocalDateTime;
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 public class ListController implements Controller{
 
     private static final String NAME = "ListView";
+
 
     @FXML
     private ImageView appTitle;
@@ -133,7 +135,10 @@ public class ListController implements Controller{
     @FXML
     void placeViewOne(MouseEvent event) {
 
-        Navigation.getInstance().loadScreen(PlaceController.getNAME());
+        //Navigation.getInstance().loadScreen(PlaceController.getNAME());
+
+        AudioClip clip = new AudioClip(getClass().getResource("/1982_Doce.mp3").toExternalForm());
+        clip.play();
 
     }
 
@@ -169,18 +174,20 @@ public class ListController implements Controller{
     private String transport = "Get Ride";
     private String lucky = "Get Lucky";
     // to improve
-    private String nowTime = LocalDateTime.now().toString();
+    private Integer nowTime = LocalDateTime.now().getHour();
+
+
 
 
     public void initialize() {
 
-        Image image = new Image("logo.png");
-        appTitle.setImage(image);
+        //Image image = new Image("logo.png");
+        //appTitle.setImage(image);
         homeButton.setText(home);
         foodButton.setText(food);
         transportButton.setText(transport);
         luckyButton.setText(lucky);
-        displayedTime.setText(nowTime);
+        displayedTime.setText(nowTime.toString() + ":00    heyyyyy!!");
 
     }
 

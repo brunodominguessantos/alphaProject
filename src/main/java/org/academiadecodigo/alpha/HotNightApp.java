@@ -32,5 +32,6 @@ public class HotNightApp extends Application{
         primaryStage.setTitle("Quality Time");
         FlatterFX.style();
         primaryStage.show();
+
     }
 }
