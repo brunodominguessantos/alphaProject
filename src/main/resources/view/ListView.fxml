@@ -23,6 +23,7 @@
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="158.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="168.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="170.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="170.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -30,8 +31,9 @@
                <children>
                   <Label fx:id="city" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="101.0" text="City" textAlignment="CENTER" textOverrun="CLIP" GridPane.halignment="CENTER" />
                   <Button fx:id="homeButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#homeAction" text="Button" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                  <Button fx:id="optionalButton1" mnemonicParsing="false" onMouseClicked="#option1Action" text="Button" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-                  <Button fx:id="optionalButton2" mnemonicParsing="false" onMouseClicked="#option2Action" text="Button" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                  <Button fx:id="foodButton" mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Button fx:id="transportButton" mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                  <Button fx:id="luckyButton" mnemonicParsing="false" text="Button" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
                </children>
             </GridPane>
          </children>
@@ -73,13 +75,7 @@
                               <ImageView fx:id="placeImage3" fitHeight="65.0" fitWidth="79.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#placeViewThree" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
                               <ImageView fx:id="placeImage2" fitHeight="65.0" fitWidth="79.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#placeViewTwo" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
                               <ImageView fx:id="placeImage1" fitHeight="65.0" fitWidth="79.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#placeViewOne" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="GoodBtn1" fitHeight="68.0" fitWidth="94.0" onMouseClicked="#increasePoints" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-                              <ImageView fx:id="GoodBtn2" fitHeight="68.0" fitWidth="44.0" onMouseClicked="#increasePoints" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <ImageView fx:id="GoodBtn3" fitHeight="68.0" fitWidth="44.0" onMouseClicked="#increasePoints" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <ImageView fx:id="GoodBtn4" fitHeight="68.0" fitWidth="44.0" onMouseClicked="#increasePoints" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <ImageView fx:id="GoodBtn5" fitHeight="68.0" fitWidth="44.0" onMouseClicked="#increasePoints" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <ImageView fx:id="GoodBtn6" fitHeight="68.0" fitWidth="44.0" onMouseClicked="#increasePoints" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <ImageView fx:id="GoodBtn7" fitHeight="68.0" fitWidth="44.0" onMouseClicked="#increasePoints" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <ImageView fx:id="GoodBtn1" fitHeight="68.0" fitWidth="97.0" onMouseClicked="#increasePoints" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
                               <Label fx:id="label1" prefHeight="87.0" prefWidth="199.0" text="Label" GridPane.columnIndex="2" />
                               <Label fx:id="label2" prefHeight="87.0" prefWidth="199.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                               <Label fx:id="label3" prefHeight="87.0" prefWidth="199.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
@@ -87,6 +83,97 @@
                               <Label fx:id="label5" prefHeight="87.0" prefWidth="199.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                               <Label fx:id="label6" prefHeight="87.0" prefWidth="199.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                               <Label fx:id="label7" prefHeight="87.0" prefWidth="199.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <GridPane GridPane.columnIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <ImageView fitHeight="42.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="rating1" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fitHeight="42.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="rating2" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fitHeight="42.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="rating3" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fitHeight="42.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="rating4" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fitHeight="42.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="rating5" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fitHeight="42.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="rating6" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fitHeight="42.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="rating7" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
                            </children>
                         </GridPane>
                      </children>
