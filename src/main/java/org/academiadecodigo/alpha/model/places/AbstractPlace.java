@@ -69,6 +69,7 @@ public abstract class AbstractPlace extends AbstractModel implements Place {
         this.description = description;
     }
 
+    @Override
     public List<Rating> getRatings() {
         return ratings;
     }
@@ -91,6 +92,8 @@ public abstract class AbstractPlace extends AbstractModel implements Place {
 
         return null;
     }
+
+
 
     @Override
     public String getAddress() {
