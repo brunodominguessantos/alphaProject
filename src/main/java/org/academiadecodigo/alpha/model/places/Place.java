@@ -128,7 +128,5 @@ public abstract class Place extends AbstractModel {
     public void setClosingTime(Integer closingTime) {
         this.closingTime = closingTime;
     }
-    String getAddress();
 
-    List<Rating> getRatings();
 }
