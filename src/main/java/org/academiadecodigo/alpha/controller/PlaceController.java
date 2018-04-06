@@ -8,13 +8,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.media.AudioClip;
 import org.academiadecodigo.alpha.services.PlaceService;
 import org.academiadecodigo.alpha.services.ServiceRegistry;
-import java.awt.event.MouseEvent;
+import javafx.scene.input.MouseEvent;
 
 public class PlaceController {
 
     private PlaceService placeService;
 
-    private static final String NAME = "PlaceView";
+    private static final String NAME = "PlaceView2Pacha";
     private String google = "Google it on google maps";
 
     @FXML
@@ -68,19 +68,24 @@ public class PlaceController {
     @FXML
     private Label comment5;
 
+    public void bemBombuttonAcoustic(MouseEvent mouseEvent) {
+        System.out.println("WAS CLIKCED");
+        AudioClip clip = new AudioClip(getClass().getResource("/1982_Doce.mp3").toExternalForm());
+        clip.play();
+    }
+
     public void initialize(){
         placeService = (PlaceService) ServiceRegistry.getServiceRegistry().getService(PlaceService.class.getSimpleName());
         System.out.println(placeService);
         //googleMaps.setText(google);
+
     }
 
-    @FXML
-    void bemBombuttonAcoustic(MouseEvent event){
-        AudioClip clip = new AudioClip("1982_Doce.mp3");
-        clip.play();
-    }
+
 
     public static String getNAME() {
         return NAME;
     }
+
+
 }
